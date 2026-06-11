@@ -1,0 +1,17 @@
+name: WolfLang
+version: 1.0.0
+main: com.wolflang.WolfLangPlugin
+api-version: '1.21.11'
+folia-supported: true
+depend: []
+softdepend: [PlaceholderAPI]
+
+commands:
+  wlang:
+    description: Change your language
+    aliases: [language, lang]
+    usage: /<command> [code]
+  wlangreload:
+    description: Reload WolfLang config
+    aliases: [wlreload, wolflangreload]
+    permission: wolflang.reload

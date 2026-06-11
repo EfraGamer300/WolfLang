@@ -1,0 +1,13 @@
+.gradle/
+build/
+bin/
+*.class
+*.jar
+*.log
+gradle-8.5.zip
+gradle-dist/
+META-INF/
+.idea/
+*.iml
+out/
+run/

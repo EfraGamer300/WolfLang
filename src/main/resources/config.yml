@@ -1,0 +1,21 @@
+database:
+  type: sqlite
+  host: localhost
+  port: 3306
+  database: wolflang
+  username: root
+  password: ""
+  pool-size: 10
+
+languages:
+  default: pt-br
+  supported:
+    en: English
+    pt-br: "Portugu\u00eas (Brasil)"
+    pt-pt: "Portugu\u00eas (Portugal)"
+
+placeholders:
+  welcome:
+    en: "welcome"
+    pt-br: "bemvindo"
+    pt-pt: "bemvindo"
