@@ -34,7 +34,7 @@ foreach ($ver in $Versions) {
     Write-Host "Building WolfLang for Minecraft $ver..." -ForegroundColor Yellow
     Write-Host "========================================`n" -ForegroundColor Cyan
 
-    & $wrapper build -PmcVersion=$ver --no-daemon --console=plain
+    & $wrapper build "--project-prop=mcVersion=$ver" --no-daemon --console=plain
 
     if ($LASTEXITCODE -eq 0) {
         $jar = "WolfLang-$ver.jar"

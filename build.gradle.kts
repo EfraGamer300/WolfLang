@@ -5,6 +5,8 @@ plugins {
 
 val mcVersion = project.findProperty("mcVersion")?.toString() ?: "1.21.4"
 val apiVersion = project.findProperty("apiVersion")?.toString() ?: mcVersion
+val javaRelease = project.findProperty("javaRelease")?.toString()?.toIntOrNull()
+    ?: if ((mcVersion.split(".").getOrNull(1)?.toIntOrNull() ?: 0) >= 21) 21 else 17
 
 group = "dev.wolfstudios.wolflang"
 version = "1.0.0"
@@ -32,7 +34,7 @@ java {
 }
 
 tasks.withType<JavaCompile> {
-    options.release.set(17)
+    options.release.set(javaRelease)
 }
 
 tasks.processResources {
