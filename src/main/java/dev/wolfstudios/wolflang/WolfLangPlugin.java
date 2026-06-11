@@ -1,10 +1,10 @@
-package com.wolflang;
+package dev.wolfstudios.wolflang;
 
-import com.wolflang.command.LanguageCommand;
-import com.wolflang.command.ReloadCommand;
-import com.wolflang.database.DatabaseManager;
-import com.wolflang.manager.LanguageManager;
-import com.wolflang.placeholder.LangExpansion;
+import dev.wolfstudios.wolflang.command.LanguageCommand;
+import dev.wolfstudios.wolflang.command.ReloadCommand;
+import dev.wolfstudios.wolflang.database.DatabaseManager;
+import dev.wolfstudios.wolflang.manager.LanguageManager;
+import dev.wolfstudios.wolflang.placeholder.LangExpansion;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 

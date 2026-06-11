@@ -1,6 +1,6 @@
-package com.wolflang.placeholder;
+package dev.wolfstudios.wolflang.placeholder;
 
-import com.wolflang.manager.LanguageManager;
+import dev.wolfstudios.wolflang.manager.LanguageManager;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;

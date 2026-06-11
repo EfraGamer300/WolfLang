@@ -1,4 +1,4 @@
-package com.wolflang.database;
+package dev.wolfstudios.wolflang.database;
 
 import java.util.Map;
 import java.util.UUID;

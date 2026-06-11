@@ -1,6 +1,6 @@
-package com.wolflang.command;
+package dev.wolfstudios.wolflang.command;
 
-import com.wolflang.WolfLangPlugin;
+import dev.wolfstudios.wolflang.WolfLangPlugin;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.command.Command;

@@ -1,6 +1,6 @@
-package com.wolflang.database;
+package dev.wolfstudios.wolflang.database;
 
-import com.wolflang.WolfLangPlugin;
+import dev.wolfstudios.wolflang.WolfLangPlugin;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 

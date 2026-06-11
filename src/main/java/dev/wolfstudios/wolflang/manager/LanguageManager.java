@@ -1,7 +1,7 @@
-package com.wolflang.manager;
+package dev.wolfstudios.wolflang.manager;
 
-import com.wolflang.WolfLangPlugin;
-import com.wolflang.database.DatabaseManager;
+import dev.wolfstudios.wolflang.WolfLangPlugin;
+import dev.wolfstudios.wolflang.database.DatabaseManager;
 import org.bukkit.entity.Player;
 import java.util.HashMap;
 import java.util.Map;

@@ -3,7 +3,7 @@ plugins {
     id("io.github.goooler.shadow") version "8.1.8"
 }
 
-group = "com.wolflang"
+group = "dev.wolfstudios.wolflang"
 version = "1.0.0"
 
 repositories {
@@ -30,9 +30,9 @@ java {
 }
 
 tasks.shadowJar {
-    relocate("com.zaxxer.hikari", "com.wolflang.libs.hikari")
-    relocate("com.mysql.cj", "com.wolflang.libs.mysql")
-    relocate("org.slf4j", "com.wolflang.libs.slf4j")
+    relocate("com.zaxxer.hikari", "dev.wolfstudios.wolflang.libs.hikari")
+    relocate("com.mysql.cj", "dev.wolfstudios.wolflang.libs.mysql")
+    relocate("org.slf4j", "dev.wolfstudios.wolflang.libs.slf4j")
     mergeServiceFiles()
     minimize {
         exclude(dependency("org.xerial:sqlite-jdbc:.*"))
