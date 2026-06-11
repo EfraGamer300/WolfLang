@@ -3,6 +3,9 @@ plugins {
     id("io.github.goooler.shadow") version "8.1.8"
 }
 
+val mcVersion = project.findProperty("mcVersion")?.toString() ?: "1.21.4"
+val apiVersion = project.findProperty("apiVersion")?.toString() ?: mcVersion
+
 group = "dev.wolfstudios.wolflang"
 version = "1.0.0"
 
@@ -14,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:${mcVersion}-R0.1-SNAPSHOT")
     compileOnly("me.clip:placeholderapi:2.11.6")
 
     implementation("com.zaxxer:HikariCP:6.2.1")
@@ -23,9 +26,18 @@ dependencies {
 }
 
 java {
-    withSourcesJar()
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType<JavaCompile> {
+    options.release.set(17)
+}
+
+tasks.processResources {
+    filesMatching("plugin.yml") {
+        expand("apiVersion" to apiVersion)
     }
 }
 
@@ -37,7 +49,7 @@ tasks.shadowJar {
     minimize {
         exclude(dependency("org.xerial:sqlite-jdbc:.*"))
     }
-    archiveFileName.set("WolfLang-${project.version}.jar")
+    archiveFileName.set("WolfLang-${mcVersion}.jar")
 }
 
 tasks.build {
