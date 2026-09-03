@@ -8,14 +8,116 @@ database:
   pool-size: 10
 
 languages:
-  default: pt-br
+  default: en
   supported:
-    en: English
-    pt-br: "Portugu\u00eas (Brasil)"
-    pt-pt: "Portugu\u00eas (Portugal)"
+    # Português
+    pt_BR: "Português (Brasil)"
+    pt_PT: "Português (Portugal)"
+    
+    # Inglês
+    en_US: "English (US)"
+    en_GB: "English (UK)"
+    
+    # Espanhol
+    es_ES: "Español (España)"
+    es_MX: "Español (México)"
+    es_AR: "Español (Argentina)"
+    es_CL: "Español (Chile)"
+    es_CO: "Español (Colombia)"
+    
+    # Francês
+    fr_FR: "Français"
+    fr_CA: "Français (Canada)"
+    
+    # Alemão
+    de_DE: "Deutsch"
+    de_AT: "Deutsch (Österreich)"
+    
+    # Italiano
+    it_IT: "Italiano"
+    
+    # Russo
+    ru_RU: "Русский"
+    
+    # Japonês
+    ja_JP: "日本語"
+    
+    # Chinês
+    zh_CN: "中文 (简体)"
+    zh_TW: "中文 (繁體)"
+    
+    # Coreano
+    ko_KR: "한국어"
+    
+    # Árabe
+    ar_SA: "العربية"
+    
+    # Hindi
+    hi_IN: "हिन्दी"
+    
+    # Turco
+    tr_TR: "Türkçe"
+    
+    # Holandês
+    nl_NL: "Nederlands"
+    
+    # Polonês
+    pl_PL: "Polski"
+    
+    # Ucraniano
+    uk_UA: "Українська"
+    
+    # Sueco
+    sv_SE: "Svenska"
+    
+    # Norueguês
+    nb_NO: "Norsk"
+    
+    # Dinamarquês
+    da_DK: "Dansk"
+    
+    # Finlandês
+    fi_FI: "Suomi"
+    
+    # Grego
+    el_GR: "Ελληνικά"
+    
+    # Tcheco
+    cs_CZ: "Čeština"
+    
+    # Húngaro
+    hu_HU: "Magyar"
+    
+    # Romeno
+    ro_RO: "Română"
+    
+    # Tailandês
+    th_TH: "ไทย"
+    
+    # Vietnamita
+    vi_VN: "Tiếng Việt"
+    
+    # Indonésio
+    id_ID: "Bahasa Indonesia"
+    
+    # Malaio
+    ms_MY: "Bahasa Melayu"
 
 placeholders:
   welcome:
-    en: "welcome"
-    pt-br: "bemvindo"
-    pt-pt: "bemvindo"
+    en_US: "Welcome"
+    pt_BR: "Bem-vindo"
+    pt_PT: "Bem-vindo"
+    es_ES: "Bienvenido"
+    es_MX: "Bienvenido"
+    fr_FR: "Bienvenue"
+    de_DE: "Willkommen"
+    it_IT: "Benvenuto"
+    ru_RU: "Добро пожаловать"
+    ja_JP: "ようこそ"
+    zh_CN: "欢迎"
+    ko_KR: "환영합니다"
+    ar_SA: "أهلاً بك"
+    tr_TR: "Hoş geldiniz"
+    nl_NL: "Welkom"
+    pl_PL: "Witaj"

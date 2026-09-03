@@ -22,70 +22,173 @@ public class GeoIPService {
     static {
         // Português
         COUNTRY_TO_LANG.put("BR", "pt_BR");
-        COUNTRY_TO_LANG.put("PT", "pt_BR");
+        COUNTRY_TO_LANG.put("PT", "pt_PT");
         COUNTRY_TO_LANG.put("AO", "pt_BR");
         COUNTRY_TO_LANG.put("MZ", "pt_BR");
+        COUNTRY_TO_LANG.put("CV", "pt_PT");
+        COUNTRY_TO_LANG.put("GW", "pt_PT");
+        COUNTRY_TO_LANG.put("ST", "pt_PT");
+        COUNTRY_TO_LANG.put("TL", "pt_PT");
 
         // Espanhol
-        COUNTRY_TO_LANG.put("ES", "es");
-        COUNTRY_TO_LANG.put("MX", "es");
-        COUNTRY_TO_LANG.put("AR", "es");
-        COUNTRY_TO_LANG.put("CL", "es");
-        COUNTRY_TO_LANG.put("CO", "es");
-        COUNTRY_TO_LANG.put("PE", "es");
-        COUNTRY_TO_LANG.put("VE", "es");
-        COUNTRY_TO_LANG.put("EC", "es");
-        COUNTRY_TO_LANG.put("GT", "es");
-        COUNTRY_TO_LANG.put("CU", "es");
-        COUNTRY_TO_LANG.put("BO", "es");
-        COUNTRY_TO_LANG.put("DO", "es");
-        COUNTRY_TO_LANG.put("HN", "es");
-        COUNTRY_TO_LANG.put("PY", "es");
-        COUNTRY_TO_LANG.put("SV", "es");
-        COUNTRY_TO_LANG.put("NI", "es");
-        COUNTRY_TO_LANG.put("CR", "es");
-        COUNTRY_TO_LANG.put("PA", "es");
-        COUNTRY_TO_LANG.put("UY", "es");
+        COUNTRY_TO_LANG.put("ES", "es_ES");
+        COUNTRY_TO_LANG.put("MX", "es_MX");
+        COUNTRY_TO_LANG.put("AR", "es_AR");
+        COUNTRY_TO_LANG.put("CL", "es_CL");
+        COUNTRY_TO_LANG.put("CO", "es_CO");
+        COUNTRY_TO_LANG.put("PE", "es_ES");
+        COUNTRY_TO_LANG.put("VE", "es_ES");
+        COUNTRY_TO_LANG.put("EC", "es_ES");
+        COUNTRY_TO_LANG.put("GT", "es_ES");
+        COUNTRY_TO_LANG.put("CU", "es_ES");
+        COUNTRY_TO_LANG.put("BO", "es_ES");
+        COUNTRY_TO_LANG.put("DO", "es_ES");
+        COUNTRY_TO_LANG.put("HN", "es_ES");
+        COUNTRY_TO_LANG.put("PY", "es_ES");
+        COUNTRY_TO_LANG.put("SV", "es_ES");
+        COUNTRY_TO_LANG.put("NI", "es_ES");
+        COUNTRY_TO_LANG.put("CR", "es_ES");
+        COUNTRY_TO_LANG.put("PA", "es_ES");
+        COUNTRY_TO_LANG.put("UY", "es_AR");
 
         // Inglês (padrão para muitos países)
-        COUNTRY_TO_LANG.put("US", "en");
-        COUNTRY_TO_LANG.put("GB", "en");
-        COUNTRY_TO_LANG.put("CA", "en");
-        COUNTRY_TO_LANG.put("AU", "en");
-        COUNTRY_TO_LANG.put("NZ", "en");
-        COUNTRY_TO_LANG.put("IE", "en");
-        COUNTRY_TO_LANG.put("ZA", "en");
+        COUNTRY_TO_LANG.put("US", "en_US");
+        COUNTRY_TO_LANG.put("GB", "en_GB");
+        COUNTRY_TO_LANG.put("CA", "en_US");
+        COUNTRY_TO_LANG.put("AU", "en_US");
+        COUNTRY_TO_LANG.put("NZ", "en_US");
+        COUNTRY_TO_LANG.put("IE", "en_GB");
+        COUNTRY_TO_LANG.put("ZA", "en_US");
+        COUNTRY_TO_LANG.put("JM", "en_US");
+        COUNTRY_TO_LANG.put("TT", "en_US");
+        COUNTRY_TO_LANG.put("BS", "en_US");
+        COUNTRY_TO_LANG.put("NG", "en_US");
+        COUNTRY_TO_LANG.put("KE", "en_US");
+        COUNTRY_TO_LANG.put("GH", "en_US");
+        COUNTRY_TO_LANG.put("SG", "en_US");
+        COUNTRY_TO_LANG.put("PH", "en_US");
+        COUNTRY_TO_LANG.put("IN", "en_GB");
+        COUNTRY_TO_LANG.put("PK", "en_GB");
 
         // Francês
-        COUNTRY_TO_LANG.put("FR", "fr");
-        COUNTRY_TO_LANG.put("BE", "fr");
-        COUNTRY_TO_LANG.put("CH", "fr");
+        COUNTRY_TO_LANG.put("FR", "fr_FR");
+        COUNTRY_TO_LANG.put("BE", "fr_FR");
+        COUNTRY_TO_LANG.put("CH", "fr_FR");
+        COUNTRY_TO_LANG.put("CA", "fr_CA");
+        COUNTRY_TO_LANG.put("LU", "fr_FR");
+        COUNTRY_TO_LANG.put("MC", "fr_FR");
+        COUNTRY_TO_LANG.put("CI", "fr_FR");
+        COUNTRY_TO_LANG.put("SN", "fr_FR");
+        COUNTRY_TO_LANG.put("ML", "fr_FR");
 
         // Alemão
-        COUNTRY_TO_LANG.put("DE", "de");
-        COUNTRY_TO_LANG.put("AT", "de");
+        COUNTRY_TO_LANG.put("DE", "de_DE");
+        COUNTRY_TO_LANG.put("AT", "de_AT");
+        COUNTRY_TO_LANG.put("CH", "de_DE");
+        COUNTRY_TO_LANG.put("LI", "de_DE");
+        COUNTRY_TO_LANG.put("LU", "de_DE");
 
         // Italiano
-        COUNTRY_TO_LANG.put("IT", "it");
+        COUNTRY_TO_LANG.put("IT", "it_IT");
+        COUNTRY_TO_LANG.put("SM", "it_IT");
+        COUNTRY_TO_LANG.put("VA", "it_IT");
+        COUNTRY_TO_LANG.put("CH", "it_IT");
 
         // Russo
-        COUNTRY_TO_LANG.put("RU", "ru");
+        COUNTRY_TO_LANG.put("RU", "ru_RU");
+        COUNTRY_TO_LANG.put("BY", "ru_RU");
+        COUNTRY_TO_LANG.put("KZ", "ru_RU");
+        COUNTRY_TO_LANG.put("KG", "ru_RU");
 
         // Japonês
-        COUNTRY_TO_LANG.put("JP", "ja");
+        COUNTRY_TO_LANG.put("JP", "ja_JP");
 
         // Chinês
-        COUNTRY_TO_LANG.put("CN", "zh");
-        COUNTRY_TO_LANG.put("TW", "zh");
-        COUNTRY_TO_LANG.put("HK", "zh");
+        COUNTRY_TO_LANG.put("CN", "zh_CN");
+        COUNTRY_TO_LANG.put("TW", "zh_TW");
+        COUNTRY_TO_LANG.put("HK", "zh_TW");
+        COUNTRY_TO_LANG.put("MO", "zh_TW");
+        COUNTRY_TO_LANG.put("SG", "zh_CN");
 
         // Coreano
-        COUNTRY_TO_LANG.put("KR", "ko");
+        COUNTRY_TO_LANG.put("KR", "ko_KR");
 
         // Árabe
-        COUNTRY_TO_LANG.put("SA", "ar");
-        COUNTRY_TO_LANG.put("AE", "ar");
-        COUNTRY_TO_LANG.put("EG", "ar");
+        COUNTRY_TO_LANG.put("SA", "ar_SA");
+        COUNTRY_TO_LANG.put("AE", "ar_SA");
+        COUNTRY_TO_LANG.put("EG", "ar_SA");
+        COUNTRY_TO_LANG.put("IQ", "ar_SA");
+        COUNTRY_TO_LANG.put("JO", "ar_SA");
+        COUNTRY_TO_LANG.put("KW", "ar_SA");
+        COUNTRY_TO_LANG.put("LB", "ar_SA");
+        COUNTRY_TO_LANG.put("LY", "ar_SA");
+        COUNTRY_TO_LANG.put("MA", "ar_SA");
+        COUNTRY_TO_LANG.put("OM", "ar_SA");
+        COUNTRY_TO_LANG.put("QA", "ar_SA");
+        COUNTRY_TO_LANG.put("SY", "ar_SA");
+        COUNTRY_TO_LANG.put("TN", "ar_SA");
+        COUNTRY_TO_LANG.put("YE", "ar_SA");
+
+        // Hindi
+        COUNTRY_TO_LANG.put("IN", "hi_IN");
+        COUNTRY_TO_LANG.put("NP", "hi_IN");
+
+        // Turco
+        COUNTRY_TO_LANG.put("TR", "tr_TR");
+        COUNTRY_TO_LANG.put("CY", "tr_TR");
+
+        // Holandês
+        COUNTRY_TO_LANG.put("NL", "nl_NL");
+        COUNTRY_TO_LANG.put("BE", "nl_NL");
+        COUNTRY_TO_LANG.put("SR", "nl_NL");
+
+        // Polonês
+        COUNTRY_TO_LANG.put("PL", "pl_PL");
+
+        // Ucraniano
+        COUNTRY_TO_LANG.put("UA", "uk_UA");
+
+        // Sueco
+        COUNTRY_TO_LANG.put("SE", "sv_SE");
+        COUNTRY_TO_LANG.put("FI", "sv_SE");
+
+        // Norueguês
+        COUNTRY_TO_LANG.put("NO", "nb_NO");
+
+        // Dinamarquês
+        COUNTRY_TO_LANG.put("DK", "da_DK");
+        COUNTRY_TO_LANG.put("GL", "da_DK");
+
+        // Finlandês
+        COUNTRY_TO_LANG.put("FI", "fi_FI");
+
+        // Grego
+        COUNTRY_TO_LANG.put("GR", "el_GR");
+        COUNTRY_TO_LANG.put("CY", "el_GR");
+
+        // Tcheco
+        COUNTRY_TO_LANG.put("CZ", "cs_CZ");
+        COUNTRY_TO_LANG.put("SK", "cs_CZ");
+
+        // Húngaro
+        COUNTRY_TO_LANG.put("HU", "hu_HU");
+
+        // Romeno
+        COUNTRY_TO_LANG.put("RO", "ro_RO");
+        COUNTRY_TO_LANG.put("MD", "ro_RO");
+
+        // Tailandês
+        COUNTRY_TO_LANG.put("TH", "th_TH");
+
+        // Vietnamita
+        COUNTRY_TO_LANG.put("VN", "vi_VN");
+
+        // Indonésio
+        COUNTRY_TO_LANG.put("ID", "id_ID");
+
+        // Malaio
+        COUNTRY_TO_LANG.put("MY", "ms_MY");
+        COUNTRY_TO_LANG.put("BN", "ms_MY");
     }
 
     /**
