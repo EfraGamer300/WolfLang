@@ -10,7 +10,7 @@ commands:
   wlang:
     description: Change your language
     aliases: [language, lang]
-    usage: /<command> [code|auto]
+    usage: /<command> [code|auto|gui]
   wlangreload:
     description: Reload WolfLang config
     aliases: [wlreload, wolflangreload]

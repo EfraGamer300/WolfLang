@@ -43,6 +43,12 @@ public class LanguageCommand implements CommandExecutor {
             return true;
         }
 
+        // Comando /lang gui
+        if (arg.equals("gui") || arg.equals("menu")) {
+            plugin.getGuiListener().openGUI(player);
+            return true;
+        }
+
         String lang = arg;
         Map<String, String> supported = languageManager.getSupportedLanguages();
 
@@ -103,5 +109,6 @@ public class LanguageCommand implements CommandExecutor {
         }
         player.sendMessage(Component.text("Usage: /wlang <code>", TextColor.color(0xAAAAAA)));
         player.sendMessage(Component.text("       /wlang auto - Auto-detect from IP", TextColor.color(0xAAAAAA)));
+        player.sendMessage(Component.text("       /wlang gui - Open language selector", TextColor.color(0xAAAAAA)));
     }
 }

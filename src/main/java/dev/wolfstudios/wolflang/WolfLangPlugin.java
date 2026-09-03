@@ -5,6 +5,7 @@ import dev.wolfstudios.wolflang.api.WolfLangAPIImpl;
 import dev.wolfstudios.wolflang.command.LanguageCommand;
 import dev.wolfstudios.wolflang.command.ReloadCommand;
 import dev.wolfstudios.wolflang.database.DatabaseManager;
+import dev.wolfstudios.wolflang.gui.GUIListener;
 import dev.wolfstudios.wolflang.listener.PlayerJoinListener;
 import dev.wolfstudios.wolflang.manager.LanguageManager;
 import dev.wolfstudios.wolflang.placeholder.LangExpansion;
@@ -21,6 +22,7 @@ public class WolfLangPlugin extends JavaPlugin {
     private DatabaseManager databaseManager;
     private LanguageManager languageManager;
     private WolfLangAPIImpl api;
+    private GUIListener guiListener;
     private final List<LangExpansion> expansions = new ArrayList<>();
 
     @Override
@@ -44,6 +46,8 @@ public class WolfLangPlugin extends JavaPlugin {
 
         // Register listeners
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this, languageManager), this);
+        this.guiListener = new GUIListener(this, languageManager);
+        getServer().getPluginManager().registerEvents(guiListener, this);
 
         registerPlaceholders();
 
@@ -101,6 +105,10 @@ public class WolfLangPlugin extends JavaPlugin {
 
     public WolfLangAPIImpl getApi() {
         return api;
+    }
+
+    public GUIListener getGuiListener() {
+        return guiListener;
     }
 
     public static WolfLangPlugin getInstance() {
