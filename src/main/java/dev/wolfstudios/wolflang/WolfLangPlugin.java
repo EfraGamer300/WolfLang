@@ -1,5 +1,7 @@
 package dev.wolfstudios.wolflang;
 
+import dev.wolfstudios.wolflang.api.WolfLangAPI;
+import dev.wolfstudios.wolflang.api.WolfLangAPIImpl;
 import dev.wolfstudios.wolflang.command.LanguageCommand;
 import dev.wolfstudios.wolflang.command.ReloadCommand;
 import dev.wolfstudios.wolflang.database.DatabaseManager;
@@ -18,6 +20,7 @@ public class WolfLangPlugin extends JavaPlugin {
 
     private DatabaseManager databaseManager;
     private LanguageManager languageManager;
+    private WolfLangAPIImpl api;
     private final List<LangExpansion> expansions = new ArrayList<>();
 
     @Override
@@ -33,6 +36,9 @@ public class WolfLangPlugin extends JavaPlugin {
 
         languageManager.loadAllFromDatabase();
 
+        // Initialize API
+        this.api = new WolfLangAPIImpl(this, languageManager);
+
         getCommand("wlang").setExecutor(new LanguageCommand(this, languageManager));
         getCommand("wlangreload").setExecutor(new ReloadCommand(this));
 
@@ -42,6 +48,7 @@ public class WolfLangPlugin extends JavaPlugin {
         registerPlaceholders();
 
         getLogger().info("WolfLang enabled!");
+        getLogger().info("WolfLangAPI ready for plugins!");
     }
 
     private void registerPlaceholders() {
@@ -90,5 +97,13 @@ public class WolfLangPlugin extends JavaPlugin {
 
     public LanguageManager getLanguageManager() {
         return languageManager;
+    }
+
+    public WolfLangAPIImpl getApi() {
+        return api;
+    }
+
+    public static WolfLangPlugin getInstance() {
+        return getPlugin(WolfLangPlugin.class);
     }
 }

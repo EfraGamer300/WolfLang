@@ -29,6 +29,10 @@ public class LanguageManager {
         return cache.getOrDefault(player.getUniqueId(), getDefaultLanguage());
     }
 
+    public String getLanguage(UUID playerUuid) {
+        return cache.getOrDefault(playerUuid, getDefaultLanguage());
+    }
+
     public void setLanguage(Player player, String language) {
         UUID uuid = player.getUniqueId();
         cache.put(uuid, language);
