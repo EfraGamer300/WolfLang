@@ -3,6 +3,7 @@ package dev.wolfstudios.wolflang;
 import dev.wolfstudios.wolflang.command.LanguageCommand;
 import dev.wolfstudios.wolflang.command.ReloadCommand;
 import dev.wolfstudios.wolflang.database.DatabaseManager;
+import dev.wolfstudios.wolflang.listener.PlayerJoinListener;
 import dev.wolfstudios.wolflang.manager.LanguageManager;
 import dev.wolfstudios.wolflang.placeholder.LangExpansion;
 import org.bukkit.configuration.ConfigurationSection;
@@ -34,6 +35,9 @@ public class WolfLangPlugin extends JavaPlugin {
 
         getCommand("wlang").setExecutor(new LanguageCommand(this, languageManager));
         getCommand("wlangreload").setExecutor(new ReloadCommand(this));
+
+        // Register listeners
+        getServer().getPluginManager().registerEvents(new PlayerJoinListener(this, languageManager), this);
 
         registerPlaceholders();
 
